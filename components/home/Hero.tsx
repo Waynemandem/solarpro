@@ -75,7 +75,7 @@ export default function Hero() {
           <div className="absolute -right-8 -top-8 h-40 w-40 rounded-full bg-[#FF8A26]/20 blur-3xl" />
 
           <div className="relative overflow-hidden rounded-3xl bg-[#10233F] shadow-2xl">
-            <Image
+            <img
               src="/images/images.jpeg"
               alt="Modern solar panel installation"
               className="h-[420px] w-full object-cover md:h-[520px]"

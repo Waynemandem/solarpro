@@ -4,7 +4,7 @@ export const business = {
   description:
     "Discover reliable solar panels, inverters, batteries and complete solar solutions.",
 
-  logoText: "SOLARPRO",
+  logoText: "Double A Solar Tech",
 
   colors: {
     navy: "#10233F",
