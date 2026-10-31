@@ -1,13 +1,17 @@
+"use client";
+
 import Link from "next/link";
 import { business } from "@/config/business";
+import { useBranding } from "@/components/branding/BrandingProvider";
 
 export default function Footer() {
+  const { businessName } = useBranding();
   return (
     <footer className="bg-[#10233F] text-white">
       <div className="container grid gap-10 py-14 md:grid-cols-3">
         <div>
           <h2 className="text-2xl font-extrabold text-white">
-            {business.name}
+            {businessName}
             <span className="text-[#FF8A26]">.</span>
           </h2>
 

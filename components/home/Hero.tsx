@@ -1,8 +1,13 @@
+"use client";
+
 import Link from "next/link";
 import { business } from "@/config/business";
 import Image from "next/image";
+import { useBranding } from "../branding/BrandingProvider";
+
 
 export default function Hero() {
+  const { businessName } = useBranding();
   return (
     <section className="relative overflow-hidden bg-[#F3F6FA]">
       <div className="container grid min-h-[600px] items-center gap-12 py-16 lg:grid-cols-2 lg:py-20">
@@ -26,7 +31,7 @@ export default function Hero() {
           <p className="mt-7 max-w-lg text-base leading-8 text-gray-600 md:text-lg">
             Discover reliable solar panels, powerful inverters and
             dependable battery solutions for your home and business.
-            Take control of your energy needs with {business.name}.
+            Take control of your energy needs with {businessName}.
           </p>
 
           <div className="mt-9 flex flex-wrap gap-4">

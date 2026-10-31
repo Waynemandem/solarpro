@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import { business } from "@/config/business";
+import { useBranding } from "@/components/branding/BrandingProvider";
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -10,7 +13,8 @@ const navigation = [
 
 export default function Navbar() {
   const whatsappLink = `https://wa.me/${business.contact.whatsapp}`;
-
+  const { businessName } = useBranding();
+    
   return (
     <header className="sticky top-0 z-50 border-b border-gray-100 bg-white/95 backdrop-blur">
       <nav className="container flex h-[76px] items-center justify-between">
@@ -22,7 +26,7 @@ export default function Navbar() {
 
           <div>
             <span className="block text-lg font-extrabold tracking-tight text-[#10233F]">
-              {business.logoText}
+              {businessName.toUpperCase()}
             </span>
             <span className="block text-[9px] tracking-[2px] text-gray-500">
               POWERING YOUR FUTURE
